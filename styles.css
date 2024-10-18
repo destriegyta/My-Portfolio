@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: hsl(0, 0%, 20%);
+    line-height: 1.6;
+    background: linear-gradient(circle at top left, #f5f5f5, #ece9e6 )
+}
+.main-header{
+    background: radial-gradient(circle at center, #00c6cf, #0072ff);
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+}
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 58px;    
+    top: 0;
+}
+
+.logo{
+    font-size: 1.8rem;
+    font-weight: bold;
+    align-items: center; 
+    text-align: left;
+    color: #000;
+}
+.logo p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 10px;
+    color: #003366;
+}
+
+
+.logo i{
+margin: 10px;
+color: darkblue;
+}
+
+#navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+#navbar i{
+    margin: 10px;
+    color: darkblue;
+}
+
+#navbar li{
+    margin-left: 20px;    
+}
+
+#navbar a{
+    text-decoration: none;
+    color: darkblue;
+    font-size: 1.2rem;
+    transition: color 0.3s;    
+}
+.main-header::after{
+    content: "";
+    position:absolute;
+    width: 100%;
+    height: 300px;
+    background: url(https://www.transparenttextures.com/patterns/clouds.png) repeat;
+    opacity: 0.3;
+    bottom: 0;
+}
+
+#welcome-section h1{
+   font-size: 2rem;
+   animation: fadeInDown 1s ease-out; 
+   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+#welcome-section p{
+    font-size: 1.2rem;
+    margin: 20px 0;
+    animation: fadeInDown 1s ease-out; 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+ }
+
+.cta-button{
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 1rem;
+    font-weight: bolder;
+    background-color: #ffdf00;
+    color: #333;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 8px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0,3s esae, transform 0,3s ease;
+    animation: fadeInUp 2s ease-out;
+}
+
+.cta-button:hover{
+    background: #ff9900;
+    transform: scale(1.05);
+}
+
+@keyframes fadeInDown{
+    from{
+        opacity: 0;
+        transform: translateY(-50px);        
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+@keyframes fadeInUp{
+    from{
+        opacity: 0;
+        transform: translateY(50px);        
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+.about-section{
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+    background: radial-gradient(circle at center, #f5f5f5, #ece9e6);
+}
+
+.about-section h2{
+   font-size: 3rem;
+   margin-bottom: 20px;
+   animation: fadeInDown 1s ease-out;
+}
+.about-content{
+    display: flex;
+    flex-direction: column;
+ }
+
+.about-icon{
+    font-size: 3rem;
+    color: darkblue;
+    animation: bounceIn 1.5s ease-out;
+    margin-top: 15px;
+ }
+
+ .about-section p{
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 1.5s ease-out;
+    align-self: center;
+    }
+
+ @keyframes bounceIn{
+    0%{
+        transform: scale(0);        
+    }
+    60%{
+        transform: scale(1.2); 
+    }  
+    100%{
+        transform: scale(1); 
+    } 
+}
+
+#projects{
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+.projects-section h2{
+    font-size: 3rem;
+    margin-bottom: 40px;
+    animation: fadeInODown 1s ease-out;
+}
+
+.project-tile {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.project-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transform: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px)
+}
+
+.project-icon{
+    font-size: 3rem;
+    color: #0072ff;
+    margin-bottom: 15px;
+    transition: color 0.3 ease;
+}
+
+.project-card:hover .project-icon {
+    color: #00c6cf;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px)
+}
+.card-content h3{
+    font: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.card-content p{
+    font: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.project-link{
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #0072ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover{
+   background-color: #0cb9d0;
+   
+}
+
+.contact-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;    
+    background-color: #0072ff;
+    color: white;
+    text-align: center;
+    background: radial-gradient(circle at center, #0072ff, #003366);
+    align-content: center;
+   }
+   
+
+.contact-section h2{
+    font-size: 3rem;
+    margin-bottom: 40px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.contact-section form{
+    max-width: 600px;
+    margin: 0;
+  }
+
+.contact-section input,
+.contact-section textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.contact-section button{
+    padding: 15px 30px;
+    background-color: yellow;
+    color: #333;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-section button:hover{
+    background-color: #ff9900;
+    transform: scale(1.05);
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+    background-color: #003366;
+    color: #ece9e6;    
+}
+
+
+footer i{
+    color: lightblue;    
+}
+
+@media (max-width: 768px){
+    #welcome-section {
+        font-size: 3rem;
+    }
+    .cta-button{
+        font-size: 3rem;
+    }
+
+    .about-section h2,
+    .projects-section h2,
+    .contact-section h2 {
+        font-size: 3rem;
+    }
+}
+/* testing */
